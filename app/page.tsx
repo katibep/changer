@@ -1,101 +1,159 @@
-import Image from "next/image";
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import Image from 'next/image'
+import Link from 'next/link';
+import React from 'react'
+const categories= [
+  {
+    title: "vegetable",
+    description: "local breed",
+    image: "/veg4.jpg",
+  },
+  {
+    title: "vegetable",
+    description: "local breed",
+    image: "/veg1.jpg",
+  },
+  {
+    title: "vegetable",
+    description: "local breed",
+    image: "/meat.jpg",
+  },
+  {
+    title: "vegetable",
+    description: "local breed",
+    image: "/veg3.avif",
+  },
+  {
+    title: "vegetable",
+    description: "local breed",
+    image: "/meta.jpg",
+  },
+  {
+    title: "vegetable",
+    description: "local breed",
+    image: "/veg2.jpg",
+  },
+  
+ 
+ 
+];
+const products = [
+  {
+    title: "vegetable",
+    category: "local breed",
+    image: "/veg4.jpg",
+  },
+  {
+    title: "vegetable",
+    category: "local breed",
+    image: "/veg4.jpg",
+  },
+  {
+    title: "vegetable",
+    category: "local breed",
+    image: "/veg1.jpg",
+  },
+  {
+    title: "vegetable",
+    category: "local breed",
+    image: "/veg1.jpg",
+  },
+  {
+    title: "vegetable",
+    category: "local breed",
+    image: "/meat.jpg",
+  },
+  {
+    title: "vegetable",
+    category: "local breed",
+    image: "/meat.jpg",
+  },
+  {
+    title: "vegetable",
+    category: "local breed",
+    image: "/veg3.avif",
+  },
+  {
+    title: "vegetable",
+    category: "local breed",
+    image: "/meta.jpg",
+  },
+  {
+    title: "vegetable",
+    category: "local breed",
+    image: "/meta.jpg",
+  },
+  {
+    title: "vegetable",
+    category: "local breed",
+    image: "/meta.jpg",
+  },
+  {
+    title: "vegetable",
+    category: "local breed",
+    image: "/veg2.jpg",
+  },
+  {
+    title: "vegetable",
+    category: "local breed",
+    image: "/veg2.jpg",
+  },
+  
+ 
+ 
+];
 
-export default function Home() {
+
+export default function Gromuse(){
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+    <div className="">
+      <div className=' p-3 flex items-center justify-center gap-3 text-green-800 text-[2rem] '>Gromuse 
+      <Input className='width-[49rem]' type='text'placeholder='search pro...'/>
+      <Link className='text-[1rem] bg-black text-white text-center rounded-2xl' href='/add-new'>add new categories</Link>
     </div>
-  );
+    <div className=" p-3 flex bg-green-900 h-[40%]">
+      <div className=" flex justify-center flex-col gap-1">
+      <p className='text-[4rem] text-white'>we bring the stores to your door</p>
+      <p className='text-white'>get organic products and sastainably sorced <br /> gloceries delivery at up to 4% of glocery</p>
+      <Button className='bg-yellow-400 w-20 mt-[2rem] rounded-3xl text-white'>shop now</Button>
+      </div>
+      <div className="">
+        <Image className='rounded-2xl' src="/floor.jpg" alt="food" width={1060} height={658} />
+      </div>
+    </div>
+    {/* categories */}
+    <p className="ml-[8rem] mt-5 text-[3rem]">CATEGORIES</p>
+    <div className="flex mt-4 gap-3 text-white bg-slate-100 p-3">
+    {
+      categories.map((category,i)=>{
+        return(
+          <div className=" bg-slate-800 p-2 rounded-2xl flex flex-col justify-center items-center ">
+      <p>{category.title}</p>
+      <p>{category.description}</p>
+      <Image className='w-[150px] h-[100px] rounded-2xl' src={category.image} alt="vegetable" width={1060} height={658} />
+    </div>
+        )
+      })
+    }
+    </div>
+    {/* products */}
+    <p className="ml-[8rem] mt-5 text-[3rem]">YOU MIGHT NEED</p>
+    <div className="pl-[8rem] pr-[8rem] grid grid-cols-3  text-green-800 gap-2  ">
+     {
+      products.map((product,i)=>{
+        return(
+          <div className="rounded-2xl bg-slate-400 flex flex-col justify-center items-center p-3">
+        <p className=''>{product.title}</p>
+        <p className=''>{product.category}</p>
+        <Image className='w-[300px] h-[200px] rounded-2xl' src={product.image} alt="vegetable" width={1060} height={658} />
+      </div>
+        )
+        
+      })
+     }
+    </div>
+    </div>
+  )
 }
+
